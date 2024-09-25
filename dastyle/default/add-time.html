@@ -153,6 +153,8 @@
         vertical-align: top;
         border-top: 1px solid #dee2e6;
       }
+
+
     </style>
   </head>
 
@@ -527,23 +529,23 @@
                         </div>
                     </div>
                     <div class="row pt-2">
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <div class="form-group">
                                 <label for="startTimeSlots">Start Time Slots</label>
                                 <select id="startTimeSlots" class="form-control">
-                                    <option value="" disabled selected>Select a start time slot</option>
+                                    <option value="" disabled selected>Start Time Slot</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <div class="form-group">
                                 <label for="endTimeSlots">End Time Slots</label>
                                 <select id="endTimeSlots" class="form-control">
-                                    <option value="" disabled selected>Select an end time slot</option>
+                                    <option value="" disabled selected>End Time Slot</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <div class="form-group">
                                 <label for="daysSelect">Days of Week</label>
                                 <select id="daysSelect" class="form-control">
@@ -558,7 +560,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <div class="form-group">
                                 <label for="programSelect">Program</label>
                                 <select id="programSelect" class="form-control">
@@ -570,7 +572,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <div class="form-group">
                                 <label for="sectionSelect">Section</label>
                                 <select id="sectionSelect" class="form-control">
@@ -580,17 +582,51 @@
                                     <option value="3">C</option>
                                     <option value="4">D</option>
                                 </select>
+
+                                                     <!-- Generate Button -->
+
                             </div>
+                              
+              <!-- Your existing code -->
+              <div class="btn-container">
+                <button type="button" class="btn gradient-btn" onclick="location.href='index.html';">Generate</button>
+
+    </div>
                         </div>
                     </div>
                 </div>
+
+      
                 <!--end page-title-box-->
             </div>
+            
         </div>
-        <!-- Generate Button -->
-        <div class="col-sm-3">
-            <button type="button" class="btn btn-primary mt-4">Generate</button>
-        </div>
+   
+        
+        
+        <!-- CSS for gradient button -->
+        <style>
+        .gradient-btn {
+            background: linear-gradient(90deg, #90a6ec, #89a0af); /* Gradient from white to blue */
+            border: none;
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding */
+            font-size: 16px; /* Font size */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background 0.3s, transform 0.2s; /* Smooth transition */
+        }
+        
+        .gradient-btn:hover {
+            background: linear-gradient(90deg, #83a1b4, #92a8f1); /* Reverse gradient on hover */
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }
+        
+        .gradient-btn:focus {
+            outline: none; /* Remove outline on focus */
+        }
+        </style>
+        
             <!--end col-->
           </div>
           
@@ -598,11 +634,11 @@
                 
         <!-- container -->
         <footer class="footer text-center text-sm-left">
-          The University of Haripur(official).com
-          <span class="d-none d-sm-inline-block float-right"
-            >Crafted with <i class="mdi mdi-heart text-danger"></i> IT services
-          </span>
-        </footer>
+           The University of Haripur(official)
+            <span class="d-none d-sm-inline-block float-right"
+              >Crafted with <i class="mdi mdi-heart text-danger"></i> IT services
+            </span>
+          </footer>
         <!--end footer-->
       </div>
       <!-- end page content -->
