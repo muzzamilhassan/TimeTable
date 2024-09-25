@@ -183,7 +183,6 @@
 
       <div class="menu-content h-100" data-simplebar>
         <ul class="metismenu left-sidenav-menu">
-      
           <li>
             <a href="javascript: void(0);"
               ><i data-feather="home" class="align-self-center menu-icon"></i
@@ -191,29 +190,28 @@
               ><span class="menu-arrow"
                 ><i class="mdi mdi-chevron-right"></i></span
             ></a>
-            
+
             <ul class="nav-second-level" aria-expanded="false">
               <li class="nav-item">
                 <!-- <a class="nav-link" href="index.html"
                   ><i class="ti-control-record"></i>Add List</a
                 > -->
-                <input type="text" name="text" id="">
+                <!-- <input type="text" name="text" id=""> -->
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="crm-index.html"
                   ><i class="ti-control-record"></i>List</a
                 >
               </li>
-   
-                  <li class="nav-item">
-                    <a class="nav-link" href="add-time.html"
-                      ><i class="ti-control-record"></i>Genrate TImeTable</a
-                    >
-                  </li>
-      
+
+              <li class="nav-item">
+                <a class="nav-link" href="add-time.html"
+                  ><i class="ti-control-record"></i>Genrate TImeTable</a
+                >
+              </li>
             </ul>
           </li>
-     
+
           <li>
             <a href="javascript: void(0);"
               ><i data-feather="home" class="align-self-center menu-icon"></i
@@ -233,8 +231,6 @@
                   ><i class="ti-control-record"></i>List</a
                 >
               </li>
-             
-             
             </ul>
           </li>
           <li>
@@ -246,18 +242,15 @@
             ></a>
             <ul class="nav-second-level" aria-expanded="false">
               <li class="nav-item">
-                <input type="text" name="text" id="" placeholder="Add ">
+                <input type="text" name="text" id="" placeholder="Add " />
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="crm-index.html"
                   ><i class="ti-control-record"></i>List</a
                 >
               </li>
-             
-             
             </ul>
           </li>
-        
         </ul>
       </div>
     </div>
@@ -521,357 +514,91 @@
           <!-- Page-Title -->
           <div class="row">
             <div class="col-sm-12">
-              <div class="page-title-box py-0 pt-2">
-                <div class="row">
-                  <div class="col">
-                    <h4 class="page-title">Time Table</h4>
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item">
-                        <a href="javascript:void(0);">home</a>
-                      </li>
-                      <li class="breadcrumb-item active">timetable</li>
-                    </ol>
-
-                    <div class="row pt-2">
-                      <div class="col-sm-3">
-                        <div class="form-group">
-                          <label>Program</label>
-                          <select class="form-control">
-                            <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                            <option>option 4</option>
-                            <option>option 5</option>
-                          </select>
+                <div class="page-title-box py-0 pt-2">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="page-title">Time Table</h4>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="javascript:void(0);">home</a>
+                                </li>
+                                <li class="breadcrumb-item active">Generate TimeTable</li>
+                            </ol>
                         </div>
-                      </div>
-                      <div class="col-sm-3">
-                        <div class="form-group">
-                          <label>Semester</label>
-                          <select class="form-control">
-                            <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                            <option>option 4</option>
-                            <option>option 5</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-sm-3">
-                        <div class="form-group">
-                          <label>Section</label>
-                          <select class="form-control">
-                            <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                            <option>option 4</option>
-                            <option>option 5</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-sm-3">
-                        <div class="form-group">
-                          <label>Select</label>
-                          <select class="form-control">
-                            <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                            <option>option 4</option>
-                            <option>option 5</option>
-                          </select>
-                        </div>
-                      </div>
                     </div>
-                  </div>
+                    <div class="row pt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="startTimeSlots">Start Time Slots</label>
+                                <select id="startTimeSlots" class="form-control">
+                                    <option value="" disabled selected>Select a start time slot</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="endTimeSlots">End Time Slots</label>
+                                <select id="endTimeSlots" class="form-control">
+                                    <option value="" disabled selected>Select an end time slot</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="daysSelect">Days of Week</label>
+                                <select id="daysSelect" class="form-control">
+                                    <option value="" disabled selected>Select a day</option>
+                                    <option value="1">Monday</option>
+                                    <option value="2">Tuesday</option>
+                                    <option value="3">Wednesday</option>
+                                    <option value="4">Thursday</option>
+                                    <option value="5">Friday</option>
+                                    <option value="6">Saturday</option>
+                                    <option value="7">Sunday</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="programSelect">Program</label>
+                                <select id="programSelect" class="form-control">
+                                    <option value="" disabled selected>Select Program</option>
+                                    <option value="1">CS</option>
+                                    <option value="2">SE</option>
+                                    <option value="3">AI</option>
+                                    <option value="4">DS</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="sectionSelect">Section</label>
+                                <select id="sectionSelect" class="form-control">
+                                    <option value="" disabled selected>Select Section</option>
+                                    <option value="1">A</option>
+                                    <option value="2">B</option>
+                                    <option value="3">C</option>
+                                    <option value="4">D</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!--end row-->
-              </div>
-              <!--end page-title-box-->
+                <!--end page-title-box-->
             </div>
+        </div>
+        <!-- Generate Button -->
+        <div class="col-sm-3">
+            <button type="button" class="btn btn-primary mt-4">Generate</button>
+        </div>
             <!--end col-->
           </div>
-          <!--end row--><!-- end page title end breadcrumb -->
-
-          <div class="container">
-            <div class="timetable-img text-center">
-              <img src="img/content/timetable.png" alt />
-            </div>
-            <div class="table-responsive">
-              <table class="table table-bordered text-center">
-                <thead>
-                  <tr class="bg-light-gray">
-                    <th class="text-uppercase">Time</th>
-                    <th class="text-uppercase">Monday</th>
-                    <th class="text-uppercase">Tuesday</th>
-                    <th class="text-uppercase">Wednesday</th>
-                    <th class="text-uppercase">Thursday</th>
-                    <th class="text-uppercase">Friday</th>
-                    <th class="text-uppercase">Saturday</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="align-middle">08:30am</td>
-                    <td>
-                      <span
-                        class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >English</span
-                      >
-                      <div class="margin-10px-top font-size14">8:30-10:30</div>
-                      <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >Physics</span
-                      >
-                      <div class="margin-10px-top font-size14">8:30-10:30</div>
-                      <div class="font-size13 text-light-gray">Marta Healy</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >Physics</span
-                      >
-                      <div class="margin-10px-top font-size14">8:30-10:30</div>
-                      <div class="font-size13 text-light-gray">Marta Healy</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >IOT</span
-                      >
-                      <div class="margin-10px-top font-size14">8:30-10:30</div>
-                      <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >English</span
-                      >
-                      <div class="margin-10px-top font-size14">8:30-10:30</div>
-                      <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >Art</span
-                      >
-                      <div class="margin-10px-top font-size14">8:30-10:30</div>
-                      <div class="font-size13 text-light-gray">Kate Alley</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >English</span
-                      >
-                      <div class="margin-10px-top font-size14">8:30-10:30</div>
-                      <div class="font-size13 text-light-gray">James Smith</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle">10:30am</td>
-                    <td>
-                      <span
-                        class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >IOT</span
-                      >
-                      <div class="margin-10px-top font-size14">10:30-11:30</div>
-                      <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >IOT</span
-                      >
-                      <div class="margin-10px-top font-size14">10:30-11:30</div>
-                      <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-                    <td class="bg-light-gray"></td>
-                    <td>
-                      <span
-                        class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >Art</span
-                      >
-                      <div class="margin-10px-top font-size14">10:30-11:30</div>
-                      <div class="font-size13 text-light-gray">Kate Alley</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >Physics</span
-                      >
-                      <div class="margin-10px-top font-size14">10:30-11:30</div>
-                      <div class="font-size13 text-light-gray">Marta Healy</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >English</span
-                      >
-                      <div class="margin-10px-top font-size14">10:30-11:30</div>
-                      <div class="font-size13 text-light-gray">James Smith</div>
-                    </td>
-                    <td class="bg-light-gray"></td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle">11:30am</td>
-                    <td>
-                      <span
-                        class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >DLD</span
-                      >
-                      <div class="margin-10px-top font-size14">11:30-12:30</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >DLD</span
-                      >
-                      <div class="margin-10px-top font-size14">11:30-12:30</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >DLD</span
-                      >
-                      <div class="margin-10px-top font-size14">11:30-12:30</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >DLD</span
-                      >
-                      <div class="margin-10px-top font-size14">11:30-12:30</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >DLD</span
-                      >
-                      <div class="margin-10px-top font-size14">11:30-12:30</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >DLD</span
-                      >
-                      <div class="margin-10px-top font-size14">11:30-12:30</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >DLD</span
-                      >
-                      <div class="margin-10px-top font-size14">11:30-12:30</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle">12:30pm</td>
-                    <td class="bg-light-gray"></td>
-                    <td>
-                      <span
-                        class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >Art</span
-                      >
-                      <div class="margin-10px-top font-size14">12:30-1:30</div>
-                      <div class="font-size13 text-light-gray">Kate Alley</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >Art</span
-                      >
-                      <div class="margin-10px-top font-size14">12:30-1:30</div>
-                      <div class="font-size13 text-light-gray">Kate Alley</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >English</span
-                      >
-                      <div class="margin-10px-top font-size14">12:30-1:30</div>
-                      <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >IOT</span
-                      >
-                      <div class="margin-10px-top font-size14">12:30-1:30</div>
-                      <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-                    <td class="bg-light-gray"></td>
-                    <td>
-                      <span
-                        class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >Physics</span
-                      >
-                      <div class="margin-10px-top font-size14">12:30-1:30</div>
-                      <div class="font-size13 text-light-gray">Marta Healy</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="align-middle">01:30pm</td>
-                    <td>
-                      <span
-                        class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >English</span
-                      >
-                      <div class="margin-10px-top font-size14">1:30-2:00</div>
-                      <div class="font-size13 text-light-gray">James Smith</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >English</span
-                      >
-                      <div class="margin-10px-top font-size14">1:30-2:00</div>
-                      <div class="font-size13 text-light-gray">James Smith</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >IOT</span
-                      >
-                      <div class="margin-10px-top font-size14">1:30-2:00</div>
-                      <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-                    <td class="bg-light-gray"></td>
-                    <td>
-                      <span
-                        class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >English</span
-                      >
-                      <div class="margin-10px-top font-size14">1:30-2:00</div>
-                      <div class="font-size13 text-light-gray">James Smith</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >Physics</span
-                      >
-                      <div class="margin-10px-top font-size14">1:30-2:00</div>
-                      <div class="font-size13 text-light-gray">Marta Healy</div>
-                    </td>
-                    <td>
-                      <span
-                        class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13"
-                        >IOT</span
-                      >
-                      <div class="margin-10px-top font-size14">1:30-2:00</div>
-                      <div class="font-size13 text-light-gray">Ivana Wong</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          
         </div>
-
+                
         <!-- container -->
         <footer class="footer text-center text-sm-left">
-          muzziDeveloper.com
+          The University of Haripur(official).com
           <span class="d-none d-sm-inline-block float-right"
             >Crafted with <i class="mdi mdi-heart text-danger"></i> IT services
           </span>
@@ -895,6 +622,69 @@
     <script src="/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
     <script src="assets/pages/jquery.analytics_dashboard.init.js"></script>
     <!-- App js -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Clockpicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.min.js"></script>
+
+    <!-- JavaScript for Generating Time Slots -->
+    <!-- Initialize Clockpicker -->
+    <script>
+        // Function to add leading zeros for consistency (e.g., 08:00 instead of 8:00)
+        function pad(num) {
+          return num.toString().padStart(2, '0');
+        }
+  
+        // Function to generate time slots from 8:00 AM to 4:30 PM
+        function generateTimeSlots() {
+          let startTime = 8 * 60; // Start time in minutes (8:00 AM)
+          let endTime = 16 * 60 + 30; // End time in minutes (4:30 PM)
+          let interval = 30; // 30-minute intervals
+          let timeSlots = [];
+  
+          // Loop to generate time slots
+          for (let minutes = startTime; minutes <= endTime; minutes += interval) {
+            let hours = Math.floor(minutes / 60);
+            let mins = minutes % 60;
+  
+            let period = hours >= 12 ? 'PM' : 'AM';
+            let displayHours = hours > 12 ? hours - 12 : hours; // Convert to 12-hour format
+            displayHours = displayHours === 0 ? 12 : displayHours; // Handle 12:00 AM and PM cases
+  
+            // Format the time slot
+            let timeSlot = `${pad(displayHours)}:${pad(mins)} ${period}`;
+            timeSlots.push(timeSlot);
+          }
+  
+          return timeSlots;
+        }
+  
+        // Function to populate the dropdown with time slots
+        function populateTimeSlots() {
+          const timeSlots = generateTimeSlots();
+          const startTimeSlotsSelect = document.getElementById("startTimeSlots");
+          const endTimeSlotsSelect = document.getElementById("endTimeSlots");
+  
+          // Add time slots as options in the select dropdown
+          timeSlots.forEach(slot => {
+            const option = document.createElement('option');
+            option.value = slot;
+            option.textContent = slot;
+            startTimeSlotsSelect.appendChild(option);
+          });
+          timeSlots.forEach(slot => {
+            const option = document.createElement('option');
+            option.value = slot;
+            option.textContent = slot;
+            endTimeSlotsSelect.appendChild(option);
+          });
+        }
+  
+        // Call the function to populate time slots when the page loads
+        populateTimeSlots();
+      </script>
+
     <script src="assets/js/app.js"></script>
   </body>
 </html>
