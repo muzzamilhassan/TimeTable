@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th, td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      tr {
+        transition: background-color 0.3s ease;
+      }
+
+      tr:hover {
+        background-color: #e0e0e0; /* Change background on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Add Modal Structure -->
+    <div class="modal fade" id="accordionModal" tabindex="-1" aria-labelledby="accordionModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="accordionModalLabel">Time Table</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Removed accordion structure -->
+            <div class="row mb-3">
+              <div class="col">
+                <label for="startTime" class="form-label">Start Time Slots</label>
+                <select class="form-select" id="startTime">
+                  <option selected>Choose...</option>
+                  <option value="08:30 AM">08:30 AM</option>
+                  <option value="09:30 AM">09:30 AM</option>
+                  <option value="10:30 AM">10:30 AM</option>
+                  <option value="11:30 AM">11:30 AM</option>
+                  <option value="12:30 PM">12:30 PM</option>
+                  <option value="01:30 PM">01:30 PM</option>
+                  <option value="02:30 PM">02:30 PM</option>
+                  <option value="03:30 PM">03:30 PM</option>
+                  <option value="04:30 PM">04:30 PM</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="endTime" class="form-label">End Time Slots</label>
+                <select class="form-select" id="endTime">
+                  <option selected>Choose...</option>
+                  <option value="09:30 AM">09:30 AM</option>
+                  <option value="10:30 AM">10:30 AM</option>
+                  <option value="11:30 AM">11:30 AM</option>
+                  <option value="12:30 PM">12:30 PM</option>
+                  <option value="01:30 PM">01:30 PM</option>
+                  <option value="02:30 PM">02:30 PM</option>
+                  <option value="03:30 PM">03:30 PM</option>
+                  <option value="04:30 PM">04:30 PM</option>
+                  <option value="05:30 PM">05:30 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="daysOfWeek" class="form-label">Days of Week</label>
+              <select class="form-select" id="daysOfWeek">
+                <option selected>Choose...</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="program" class="form-label">Program</label>
+              <select class="form-select" id="program">
+                <option selected>Choose...</option>
+                <option value="CS">CS</option>
+                <option value="SE">SE</option>
+                <option value="DS">DS</option>
+                <option value="TN">TN</option>
+                <option value="SS">SS</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="section" class="form-label">Section</label>
+              <select class="form-select" id="section">
+                <option selected>Choose...</option>
+                <option value="section1">A</option>
+                <option value="section1">B</option>
+                <option value="section1">C</option>
+                <option value="section1">D</option>
+              </select>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="generateButton">Generate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button to trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#accordionModal">
+      Generate Time Table
+    </button>
+    <div class="container mt-4">
+      <table id="timeTable">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Program</th>
+            <th>Section</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="fade-in">
+            <td>Monday</td>
+            <td>08:30 AM</td>
+            <td>09:30 AM</td>
+            <td>CS</td>
+            <td>A</td>
+          </tr>
+          <tr class="fade-in">
+            <td>Tuesday</td>
+            <td>09:30 AM</td>
+            <td>10:30 AM</td>
+            <td>SE</td>
+            <td>B</td>
+          </tr>
+          <tr class="fade-in">
+            <td>Wednesday</td>
+            <td>10:30 AM</td>
+            <td>11:30 AM</td>
+            <td>DS</td>
+            <td>C</td>
+          </tr>
+          <tr class="fade-in">
+            <td>Thursday</td>
+            <td>11:30 AM</td>
+            <td>12:30 PM</td>
+            <td>TN</td>
+            <td>D</td>
+          </tr>
+          <tr class="fade-in">
+            <td>Friday</td>
+            <td>12:30 PM</td>
+            <td>01:30 PM</td>
+            <td>SS</td>
+            <td>A</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      // Optional: Add a delay before adding the fade-in class
+      document.addEventListener("DOMContentLoaded", function() {
+        const rows = document.querySelectorAll("#timeTable tbody tr");
+        rows.forEach((row, index) => {
+          setTimeout(() => {
+            row.classList.add("fade-in");
+          }, index * 100); // Delay for each row
+        });
+      });
+    </script>
+  </body>
+</html>
